@@ -237,7 +237,7 @@
 # print('Average spam confidence:',test/count)       
 # # print(count)
 
-#Final Assignment 7.2 another way:
+#Final Assignment 7.2 another method using 'if not':
 fn = input("Enter the file name: ")
 fh = open(fn,'r')
 count = 0
