@@ -219,25 +219,36 @@
 #     print(line.upper())
 
 # Assignment 7.2 which needs mbox-short.txt
-fname = input("Enter file name: ")
-fh = open(fname)
+# fname = input("Enter file name: ")
+# fh = open(fname)
+# count = 0
+# test = 0
+# for line in fh:
+#     if line.startswith('X-DSPAM-Confidence:'):
+#         line = line.rstrip()
+#         count = count + 1
+#         # print(line)
+#         numbers = line[20:]
+#         # print(numbers)
+#         ppp = float(numbers)
+#         # print(ppp)
+#         test = test + ppp
+#         # print(type(ppp))
+# print('Average spam confidence:',test/count)       
+# # print(count)
+
+#Final Assignment 7.2 another way:
+fn = input("Enter the file name: ")
+fh = open(fn,'r')
 count = 0
-test = 0
+add = 0.0
 for line in fh:
-    if line.startswith('X-DSPAM-Confidence:'):
-        line = line.rstrip()
-        count = count + 1
-        # print(line)
-        numbers = line[20:]
-        # print(numbers)
-        ppp = float(numbers)
-        # print(ppp)
-        test = test + ppp
-        # print(type(ppp))
-print('Average spam confidence:',test/count)       
-# print(count)
+    if not line.startswith("X-DSPAM-Confidence") : continue
+    count = count + 1
+    n = (line.rstrip()[19:])
+    add = add + float(n)
 
-
+print(add/count)
 
 
 
