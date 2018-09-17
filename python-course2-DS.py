@@ -127,12 +127,36 @@
 # z = text[x : y+1]
 # print(float(z))
 
+# File handle as a sequence
+# xfile = open('mbox.txt')
+# for line in xfile:
+#     print(line)
 
+# Couting lines in file
+# xfile = open('mbox.txt')
+# count = 0
+# for line in xfile:
+#     count = count + 1
+# print(count)
 
+# Reading the whole file
+# xfile = open('mbox.txt')
+# input = xfile.read()
+# print(len(input))
+# print(input[:5])
 
+# Searching through a file
+# xfile = open('mbox.txt')
+# for line in xfile:
+#     if line.startswith('String'):
+#         print(line)
 
-
-
+# Searching through a file and stripping new lines
+# xfile = open('mbox.txt')
+# for line in xfile:
+#     line = line.rstrip()
+#     if line.startswith('String'):
+#         print(line)
 
 
 
