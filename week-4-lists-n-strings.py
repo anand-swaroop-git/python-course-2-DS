@@ -150,5 +150,10 @@ t = [9, 41, 12, 3, 74, 15]
 # fname = input("Enter file name: ")
 # fh = open(fname)
 # for line in fh:
-#     line = line.rstrip()
+#     # line = line.rstrip()
 #     x = line.split()
+#     # print(x)
+#     for word in x:
+#         if not word in x:
+#             x.append('word')
+#             print(x.sort())
