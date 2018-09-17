@@ -238,17 +238,17 @@
 # # print(count)
 
 #Final Assignment 7.2 another method using 'if not':
-fn = input("Enter the file name: ")
-fh = open(fn,'r')
-count = 0
-add = 0.0
-for line in fh:
-    if not line.startswith("X-DSPAM-Confidence") : continue
-    count = count + 1
-    n = (line.rstrip()[19:])
-    add = add + float(n)
+# fn = input("Enter the file name: ")
+# fh = open(fn,'r')
+# count = 0
+# add = 0.0
+# for line in fh:
+#     if not line.startswith("X-DSPAM-Confidence") : continue
+#     count = count + 1
+#     n = (line.rstrip()[19:])
+#     add = add + float(n)
 
-print(add/count)
+# print(add/count)
 
 
 
