@@ -121,9 +121,9 @@
 # Assignment 6.5
 # text = "X-DSPAM-Confidence:    0.8475";
 # x = text.find('0')
-# # print(x)
+# print(x)
 # y = text.find('5')
-# # print(y)
+# print(y)
 # z = text[x : y+1]
 # print(float(z))
 
@@ -158,6 +158,84 @@
 #     if line.startswith('String'):
 #         print(line)
 
+# Enter a file and count the lines
+# fname = input('Enter the file name:  ')
+# fhand = open(fname)
+# count = 0
+# for line in fhand:
+#     if line.startswith('String') :
+#         count = count + 1
+# print('There were', count, 'subject lines in', fname)
+
+# Skipping with continue
+# fhand = open('mbox-short.txt')
+# for line in fhand:
+#     line = line.rstrip()
+#     if not line.startswith('From:') :
+#         continue
+#     print(line)
+
+# Using in to select lines
+# fhand = open('mbox-short.txt')
+# for line in fhand:
+#     line = line.rstrip()
+#     if not '@uct.ac.za' in line : 
+#         continue
+#     print(line)
+
+# Prompt for file name and search the line starting with
+# fname = input('Enter the file name:  ')
+# fhand = open(fname)
+# count = 0
+# for line in fhand:
+#     if line.startswith('Subject:') :
+#         count = count + 1
+# print('There were', count, 'subject lines in', fname)
+
+# Bad file names error handling
+# fname = input('Enter the file name:  ')
+#   try:
+#       fhand = open(fname)
+#   except:
+#       print('File cannot be opened:', fname)
+#       quit()
+
+#   count = 0
+#   for line in fhand:
+#       if line.startswith('Subject:') :
+#           count = count + 1
+#   print('There were', count, 'subject lines in', fname)
+
+# File Handle
+# fhand = open('mbox.txt')
+# print(fhand)
+
+
+# Assignment 7.1 which needs words.txt
+# fname = input("Enter file name: ")
+# fh = open(fname)
+# for line in fh:
+#     line = line.rstrip()
+#     print(line.upper())
+
+# Assignment 7.2 which needs mbox-short.txt
+fname = input("Enter file name: ")
+fh = open(fname)
+count = 0
+test = 0
+for line in fh:
+    if line.startswith('X-DSPAM-Confidence:'):
+        line = line.rstrip()
+        count = count + 1
+        # print(line)
+        numbers = line[20:]
+        # print(numbers)
+        ppp = float(numbers)
+        # print(ppp)
+        test = test + ppp
+        # print(type(ppp))
+print('Average spam confidence:',test/count)       
+# print(count)
 
 
 
