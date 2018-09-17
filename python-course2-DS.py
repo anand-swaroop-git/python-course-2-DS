@@ -248,7 +248,7 @@
 #     n = (line.rstrip()[19:])
 #     add = add + float(n)
 
-# print(add/count)
+# print('Average spam confidence:',add/count)
 
 
 
