@@ -147,18 +147,18 @@ t = [9, 41, 12, 3, 74, 15]
 #     print(x[1])
 
 # Assignment 8.4 needs romeo.txt (WIP)
-fname = input("Enter file name: ")
-fh = open(fname)
-stuff = list()
-for line in fh:
-    line = line.rstrip().split()
-    for x in line:
-        if x in stuff: continue
-        else:
-            stuff.append(x)
+# fname = input("Enter file name: ")
+# fh = open(fname)
+# stuff = list()
+# for line in fh:
+#     line = line.rstrip().split()
+#     for x in line:
+#         if x in stuff: continue
+#         else:
+#             stuff.append(x)
+# # print(stuff)
+# stuff.sort()
 # print(stuff)
-stuff.sort()
-print(stuff)
 
      
 
