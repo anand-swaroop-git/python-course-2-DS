@@ -148,14 +148,19 @@ t = [9, 41, 12, 3, 74, 15]
 
 # Assignment 8.4 needs romeo.txt (WIP)
 fname = input("Enter file name: ")
-
 fh = open(fname)
-i = 0
+stuff = list()
 for line in fh:
-    # line = line.rstrip()
-    x = line.split()
-    # print(x[2])
-    for i in 
+    line = line.rstrip().split()
+    for x in line:
+        if x in stuff: continue
+        else:
+            stuff.append(x)
+# print(stuff)
+stuff.sort()
+print(stuff)
+
+     
 
 
     
