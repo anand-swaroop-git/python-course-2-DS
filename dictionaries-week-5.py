@@ -105,3 +105,39 @@
 # fred 42​
 # >>>
 
+# Retrieving lists of keys and values
+# >>> jjj = { 'chuck' : 1 , 'fred' : 42, 'jan': 100}​
+# >>> print(list(jjj))​
+# ['jan', 'chuck', 'fred']​
+# >>> print(jjj.keys())​
+# ['jan', 'chuck', 'fred']​
+# >>> print(jjj.values())​
+# [100, 1, 42]​
+# >>> print(jjj.items())​
+# [('jan', 100), ('chuck', 1), ('fred', 42)]​
+# >>> ​
+
+# Two iteration variables in dictionaries
+# jjj = { 'chuck' : 1 , 'fred' : 42, 'jan': 100}​
+# for aaa,bbb in jjj.items() :​
+#     print(aaa, bbb)
+# The following is the outupt of above program
+# jan 100​
+# chuck 1​
+# fred 42
+
+# BigWord and BigCount - Count the biggest word and its frequency in a File
+name = input('Enter file:')​
+handle = open(name)​
+counts = dict()​
+for line in handle:​
+    words = line.split()​
+    for word in words:​
+        counts[word] = counts.get(word,0) + 1​
+bigcount = None​
+bigword = None​
+for word,count in counts.items():​
+    if bigcount is None or count > bigcount:​
+        bigword = word​
+        bigcount = count​
+print(bigword, bigcount)​
