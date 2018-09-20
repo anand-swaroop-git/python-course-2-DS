@@ -127,17 +127,35 @@
 # fred 42
 
 # BigWord and BigCount - Count the biggest word and its frequency in a File
-name = input('Enter file:')​
-handle = open(name)​
-counts = dict()​
-for line in handle:​
-    words = line.split()​
-    for word in words:​
-        counts[word] = counts.get(word,0) + 1​
-bigcount = None​
-bigword = None​
-for word,count in counts.items():​
-    if bigcount is None or count > bigcount:​
-        bigword = word​
-        bigcount = count​
-print(bigword, bigcount)​
+# name = input('Enter file:')
+# handle = open(name)
+# counts = {}
+# for line in handle:
+#     words = line.split()
+#     for word in words:
+#         counts[word] = counts.get(word,0) + 1
+# bigcount = None
+# bigword = None
+# for word,count in counts.items():
+#     if bigcount is None or count > bigcount:
+#         bigword = word
+#         bigcount = count
+# print(bigword, bigcount)
+
+# Assignment 9.4 which needs mbox-short.txt
+# name = input("Enter file:")
+# handle = open(name)
+# text = handle.read()
+# senders = dict()
+# for line in handle:
+#     if not line.startswith("From:"):continue
+#     line = line.split()
+#     line = line[1]
+#     senders[line] = senders.get(line, 0) +1
+# bigcount = None
+# bigword = None
+# for word,sender in senders.items():
+#     if bigcount == None or sender > bigcount:
+#         bigword = word 
+#         bigcount = sender 
+# print (bigword, bigcount)
