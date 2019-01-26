@@ -142,6 +142,8 @@
 # print(count)
 
 # Reading the whole file
+# When you read any file with .read() method, it reads the content as a single lengthy string blob. This is unlike for loop which
+# reads it with \n delimiter
 # xfile = open('mbox.txt')
 # input = xfile.read()
 # print(len(input))
