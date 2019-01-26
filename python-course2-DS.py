@@ -128,6 +128,8 @@
 # print(float(z))
 
 # File handle as a sequence
+# When you put a file in a file handle, Python actually sees it as a series of strings separated by \n.
+# So, when we run a for loop, it iterates through lines, NOT individual words.
 # xfile = open('mbox.txt')
 # for line in xfile:
 #     print(line)
